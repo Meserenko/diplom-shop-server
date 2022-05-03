@@ -15,7 +15,6 @@ orderRouter.post(
       shippingAddress,
       paymentMethod,
       itemsPrice,
-      taxPrice,
       shippingPrice,
       totalPrice,
     } = req.body;
@@ -31,7 +30,6 @@ orderRouter.post(
         shippingAddress,
         paymentMethod,
         itemsPrice,
-        taxPrice,
         shippingPrice,
         totalPrice,
       });
