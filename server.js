@@ -7,11 +7,11 @@ import userRouter from "./Routes/UserRoutes.js";
 import orderRouter from "./Routes/orderRoutes.js";
 import { createRequire } from "module";
 const require = createRequire(import.meta.url);
-const corsMiddleware = require('./Middleware/CorsMiddleware.cjs')
+const corsMiddleware = require("./Middleware/CorsMiddleware.js");
 const app = express();
 
 dotenv.config();
-app.use(corsMiddleware)
+app.use(corsMiddleware);
 connectDatabase();
 app.use(express.json());
 
@@ -22,7 +22,6 @@ app.use("/api/orders", orderRouter);
 app.get("/api/config/paypal", (req, res) => {
   res.send(process.env.PAYPAL_CLIENT_ID);
 });
-
 
 // ERROR HANDLER
 app.use(notFound);
