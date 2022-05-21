@@ -7,7 +7,7 @@ import userRouter from "./Routes/UserRoutes.js";
 import orderRouter from "./Routes/orderRoutes.js";
 import { createRequire } from "module";
 const require = createRequire(import.meta.url);
-const corsMiddleware = require("./Middleware/CorsMiddleware.js");
+const corsMiddleware = require("./Middleware/CorsMiddleware.cjs");
 const app = express();
 
 dotenv.config();
